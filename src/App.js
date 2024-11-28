@@ -1,11 +1,7 @@
-import './App.css';
+import React from "react" 
+import Articles from "./containers/Articles"
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
-}
-
-export default App;
+function App() { 
+return <Articles/> 
+} 
+export default App 
