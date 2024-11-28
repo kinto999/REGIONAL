@@ -7,15 +7,10 @@ const initialState = {
 } 
 export const reducer = (state = initialState, action) => { 
   switch (action.type) { 
-    case actionTypes.ADD_ARTICLE: 
-      const newArticle = { 
-        id: Math.random(),
-        title: action.article.title, 
-        body: action.article.body, 
-      } 
+    case actionTypes.ADD_ARTICLE:
       return { 
         state, 
-        articles: state.articles.concat(newArticle), 
+        articles: [...state.articles, action.article]
       }
     default:
         return state;
