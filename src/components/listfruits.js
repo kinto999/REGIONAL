@@ -11,7 +11,7 @@ export default function ListerFruits() {
     
     return(
         <div>
-            <input onChange={ (e) => dispatch(setfruit(e.target.value)) } type="text"/><button onClick={ dispatch(addfruit(fruit)) }>Ajouter</button>
+            <input onChange={ (e) => dispatch(setfruit(e.target.value)) } type="text"/><button onClick={ () => dispatch(addfruit(fruit)) }>Ajouter</button>
             <ul>
                 { fruits.map((e, i) => <li key={i}>{e}.</li>) }
             </ul>
