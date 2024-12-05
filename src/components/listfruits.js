@@ -15,7 +15,7 @@ export default function ListerFruits() {
             <ul>
                 { fruits.map((e, i) => <li key={i}>{e}.</li>) }
             </ul>
-            <button onClick={ dispatch(delallfruits()) }>remove all fruits</button>
+            <button onClick={ () => dispatch(delallfruits()) }>remove all fruits</button>
         </div>
     )
 }
