@@ -1,17 +1,18 @@
 
 import { useSelector, useDispatch } from "react-redux";
-import { addfruit, setfruit, delallfruits } from "./actions";
+import { addfruit, delallfruits } from "./actions";
+import { useState } from "react";
 
 export default function ListerFruits() {
 
     const fruits = useSelector((state) => state.fruits);
-    const fruit = useSelector((state) => state.fruit);
+    const [fruit, setFruit] = useState('');
 
     const dispatch = useDispatch();
     
     return(
         <div>
-            <input onChange={ (e) => dispatch(setfruit(e.target.value)) } type="text"/><button onClick={ () => dispatch(addfruit(fruit)) }>Ajouter</button>
+            <input onChange={ (e) => dispatch(setFruit(e.target.value)) } type="text"/><button onClick={ () => {dispatch(addfruit(fruit)); setFruit('')} }>Ajouter</button>
             <ul>
                 { fruits.map((e, i) => <li key={i}>{e}.</li>) }
             </ul>
