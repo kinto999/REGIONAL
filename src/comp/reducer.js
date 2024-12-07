@@ -4,7 +4,7 @@ const initstate = { articles: [], id: '', des: '', prix: '', total: 0 };
 export const articlereducer = (state = initstate, action) => {
     switch(action.type) {
         case 'addarticle':
-            return { ...state, articles: [ ...articles, action.payload] };
+            return { ...state, articles: [ ...state.articles, action.payload] };
         case 'setid':
             return { ...state, id: action.payload };
         case 'setdes':
@@ -13,7 +13,7 @@ export const articlereducer = (state = initstate, action) => {
             return { ...state, prix: action.payload };
         case 'delarticle':
             return { ...state, articles: state.articles.filter((article) => article.id !== action.payload) };
-        case '':
+        case 'calculertotal':
             return { ...state, total: state.articles.reduce((acc, article) => Number(article.prix) + acc, 0) }
         default:
             return state;

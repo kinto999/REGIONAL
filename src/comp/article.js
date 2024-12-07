@@ -15,7 +15,7 @@ export default function Article() {
             id: <input type="text" onChange={ (e) => dispatch(setid(e.target.value)) }/><br/>
             designation: <input type="text" onChange={ (e) => dispatch(setdes(e.target.value)) }/><br/>
             prix: <input type="text" onChange={ (e) => dispatch(setprix(e.target.value)) }/><br/>
-            <button onClick={ (e) => dispatch(addArticle({id: id, designation: des, prix: prix})) }>Ajouter</button><br/>
+            <button onClick={ () => dispatch(addArticle({id: id, designation: des, prix: prix})) }>Ajouter</button><br/>
             <ul>
                 {articles.map((e) => <li key={e.id}>id: {e.id} | designation: {e.designation} | prix: {e.prix} | <button onClick={ () => dispatch(delarticle(e.id))}>supprimer</button></li>)}
             </ul>
