@@ -6,13 +6,24 @@
     background-color: grey;
     color: white;
 }
-
 .header {
     margin: 0px;
     background-color: grey;
     color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.home {
+    margin: 0;
 }
 a {
     text-decoration: none;
     color: white;
+}
+ul {
+    list-style-type: none;
+}
+.Liste {
+    display: flex;
+    justify-content: space-around;
 }
