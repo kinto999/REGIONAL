@@ -22,8 +22,18 @@ a {
 }
 ul {
     list-style-type: none;
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
 }
 .Liste {
     display: flex;
     justify-content: space-around;
+}
+body {
+    margin: 0px;
+}
+img {
+    width: 180px;
+    height: 300px;
 }
