@@ -1,9 +1,9 @@
-import {legacy_createStore as createStore} from 'redux' 
+import Tennis from "./components/tennis";
 
 function App() {
   return (
     <div className="App">
-        
+        <Tennis/>
     </div>
   );
 }

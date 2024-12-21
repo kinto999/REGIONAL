@@ -1,0 +1,107 @@
+
+.tennis-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8f0;
+    padding: 20px;
+}
+
+.tennis-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.score {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.score p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.player1-score {
+    color: #2563eb;
+}
+
+.player2-score {
+    color: #dc2626;
+}
+
+.controllers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.player1-btn {
+    background-color: #2563eb;
+}
+
+.player1-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.player2-btn {
+    background-color: #dc2626;
+}
+
+.player2-btn:hover {
+    background-color: #b91c1c;
+}
+
+.reset-btn {
+    background-color: #6b7280;
+}
+
+.reset-btn:hover {
+    background-color: #4b5563;
+}
+
+.pause-btn {
+    background-color: #f59e0b;
+}
+
+.pause-btn:hover {
+    background-color: #d97706;
+}
+
+.pause-btn.paused {
+    background-color: #22c55e;
+}
+
+.pause-btn.paused:hover {
+    background-color: #16a34a;
+}
+
+@media (max-width: 480px) {
+    .tennis-card {
+    padding: 20px;
+    }
+
+    .score p {
+    font-size: 24px;
+    }
+
+    .controllers {
+    grid-template-columns: 1fr;
+    }
+}
