@@ -1,4 +1,4 @@
-import Tennis from "./components/tennis";
+import Tennis from "./tennis";
 
 function App() {
   return (

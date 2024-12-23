@@ -27,14 +27,14 @@ const initState = { s1: 0, s2: 0, pauser: false }
 const Reducer = (state = initState, action) => {
     switch(action.type) {
         case joueur_1:
-            if(!state.isPaused) {
-                return { ...state, p1: state.s1 + 1 };
+            if(!state.pauser) {
+                return { ...state, s1: state.s1 + 1 };
             } else {
                 return state;
             }
         case joueur_2:
-            if(!state.isPaused) {
-                return { ...state, p2: state.s2 + 1 };
+            if(!state.pauser) {
+                return { ...state, s2: state.s2 + 1 };
             } else {
                 return state;
             }

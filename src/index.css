@@ -14,7 +14,7 @@
     padding: 25px;
     width: 100%;
     max-width: 520px;
-    border: 2px solid #d1d5db;
+    border: 2px solid #000000; /* Changed border color */
 }
 
 .score {
@@ -30,11 +30,11 @@
 }
 
 .joueur1-score {
-    color: #1d4ed8;
+    color: #ff5722; /* Changed player 1 score color */
 }
 
 .joueur2-score {
-    color: #e11d48;
+    color: #8e44ad; /* Changed player 2 score color */
 }
 
 .c {
@@ -45,7 +45,7 @@
 
 button {
     padding: 14px 22px;
-    border: none;
+    border: 2px solid #000000; /* Added border to buttons */
     border-radius: 10px;
     font-weight: bold;
     color: #ffffff;
@@ -59,43 +59,43 @@ button:hover {
 }
 
 .joueur1-btn {
-    background-color: #1d4ed8;
+    background-color: #ff9800; /* Orange */
 }
 
 .joueur1-btn:hover {
-    background-color: #1e40af;
+    background-color: #fb8c00; /* Orange Hover */
 }
 
 .joueur2-btn {
-    background-color: #e11d48;
+    background-color: #8e44ad; /* Purple */
 }
 
 .joueur2-btn:hover {
-    background-color: #9f1239;
+    background-color: #7b1fa2; /* Purple Hover */
 }
 
 .reinitialiser-btn {
-    background-color: #64748b;
+    background-color: #795548; /* Brown */
 }
 
 .reinitialiser-btn:hover {
-    background-color: #475569;
+    background-color: #6d4c41; /* Brown Hover */
 }
 
 .pause-btn {
-    background-color: #10b981;
+    background-color: #ff5722; /* Deep Orange */
 }
 
 .pause-btn:hover {
-    background-color: #059669;
+    background-color: #e64a19; /* Deep Orange Hover */
 }
 
 .pause-btn.paused {
-    background-color: #facc15;
+    background-color: #03a9f4; /* Light Blue */
 }
 
 .pause-btn.paused:hover {
-    background-color: #eab308;
+    background-color: #0288d1; /* Light Blue Hover */
 }
 
 @media (max-width: 480px) {
