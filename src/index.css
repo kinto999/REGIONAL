@@ -1,6 +1,6 @@
 
 .tennis-container {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,7 @@
 }
 
 .score p {
+    font-family: 'Century Gothic';
     font-size: 28px;
     font-weight: bold;
     color: #333;
@@ -77,19 +78,20 @@ button {
 }
 
 .pause-btn {
-    background-color: #f59e0b;
-}
-
-.pause-btn:hover {
-    background-color: #d97706;
-}
-
-.pause-btn.paused {
     background-color: #22c55e;
 }
 
-.pause-btn.paused:hover {
+.pause-btn:hover {
+
     background-color: #16a34a;
+}
+
+.pause-btn.paused {
+    background-color: #f59e0b;
+}
+
+.pause-btn.paused:hover {
+    background-color: #d97706;
 }
 
 @media (max-width: 480px) {
