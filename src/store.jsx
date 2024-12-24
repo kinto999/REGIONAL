@@ -1,50 +1,44 @@
 import { createStore } from 'redux';
 
-const joueur_1 = 'score_pour_player_1';
-const joueur_2 = 'score_pour_player_2';
-const reinitialiser = 'reinitialiser';
-const pause_reprendre= 'pause_reprendre';
-
-export const scorep1 = () => ({
-    type: joueur_1
+export const scorePlayer1 = () => ({
+    type: 'PLAYER_1_SCORE'
 });
 
-export const scorep2 = () => ({
-    type: joueur_2
+export const scorePlayer2 = () => ({
+    type: 'PLAYER_2_SCORE'
 });
 
-export const reinit = () => ({
-    type: reinitialiser
+export const resetGame = () => ({
+    type: 'RESET_GAME'
 });
 
-export const pr = () => ({
-    type: pause_reprendre
+export const togglePause = () => ({
+    type: 'TOGGLE_PAUSE'
 });
 
+const initialState = { score1: 0, score2: 0, pause: false }
 
-const initState = { s1: 0, s2: 0, pauser: false }
-
-const Reducer = (state = initState, action) => {
+const gameReducer = (state = initialState, action) => {
     switch(action.type) {
-        case joueur_1:
-            if(!state.pauser) {
-                return { ...state, s1: state.s1 + 1 };
+        case 'PLAYER_1_SCORE':
+            if(!state.pause) {
+                return { ...state, score1: state.score1 + 1 };
             } else {
                 return state;
             }
-        case joueur_2:
-            if(!state.pauser) {
-                return { ...state, s2: state.s2 + 1 };
+        case 'PLAYER_2_SCORE':
+            if(!state.pause) {
+                return { ...state, score2: state.score2 + 1 };
             } else {
                 return state;
             }
-        case reinitialiser:
-            return { ...state, s1: 0, s2: 0 };
-        case pause_reprendre:
-            return { ...state, pauser: !state.pauser };
+        case 'RESET_GAME':
+            return initialState;
+        case 'TOGGLE_PAUSE':
+            return { ...state, pause: !state.pause };
         default:
             return state;
     }
-}
+};
 
-export const store = createStore(Reducer)
+export const store =  createStore(gameReducer);
