@@ -1,6 +1,8 @@
 import { scorePlayer1, scorePlayer2, resetGame, togglePause } from "./store";
 import { useDispatch, useSelector } from "react-redux";
 
+// adil boudkhili dd202
+
 export default function Tennis() {
     const score1 = useSelector((state) => state.score1);
     const score2 = useSelector((state) => state.score2);
